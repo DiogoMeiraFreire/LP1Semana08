@@ -96,8 +96,8 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </summary>
         private void InsertPlayer()
         {
-            string name     = "";
-            int score       = 0;
+            string name;
+            int score = 0;
 
             Console.Write("Insira o Nome: ");
             name = Console.ReadLine();
@@ -111,7 +111,7 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
 
 
             try{
-                playerList.Add(new Player(name,score));
+                playerList.Add(new Player(name, score));
                 Console.WriteLine($"Added {name} with the score {score}");
 
             }   
