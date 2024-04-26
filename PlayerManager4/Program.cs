@@ -59,7 +59,15 @@ namespace PlayerManager4
                         InsertPlayer();
                         break;
                     case "2":
-                        ListPlayers(playerList);
+                        int listOption;
+                    
+                        Console.WriteLine(
+                            "Ordering options:\n1: Score Descending\n"
+                            +"2: Name Ascending\n3:Name Descending");
+                        
+                        listOption = int.Parse(Console.ReadLine());
+                        ListPlayers(playerList, listOption);
+                        
                         break;
                     case "3":
                         ListPlayersWithScoreGreaterThan();
@@ -131,16 +139,47 @@ namespace PlayerManager4
         /// <param name="playersToList">
         /// An enumerable object of players to show.
         /// </param>
-        private static void ListPlayers(IEnumerable<Player> playersToList)
+        private static void ListPlayers(IEnumerable<Player> playersToList, int option)
         {
             List<Player> playerList = new List<Player>(playersToList);
+            List<Player> playerList2 = new List<Player>(playersToList);
 
-            playerList.Sort(); 
-            playerList.Reverse();
-
-            foreach (Player player in playersToList)
+            switch(option)
             {
-                Console.WriteLine($"{player.Name} {player.Score}");
+                case 1: 
+                {
+                    playerList.Sort();
+                    playerList.Reverse(); 
+
+                    foreach (Player player in playerList)
+                    {
+                        Console.WriteLine($"{player.Name} {player.Score}");
+                    }
+                    break;
+                }
+
+                case 2:
+                {
+                    IComparer<Player> comp = new CompareByName(true);
+                    playerList.Sort(comp);
+
+                    foreach (Player player in playerList)
+                    {
+                        Console.WriteLine($"{player.Name} {player.Score}");
+                    }
+                    break;
+                }
+                case 3:
+                {
+                    IComparer<Player> comp = new CompareByName(false);
+                    playerList.Sort(comp);
+                    foreach (Player player in playerList)
+                    {
+                        Console.WriteLine($"{player.Name} {player.Score}");
+                    }
+
+                    break;
+                }
             }
         }
 
