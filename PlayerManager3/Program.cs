@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PlayerManager2
+namespace PlayerManager3
 {
     /// <summary>
     /// The player listing program.
@@ -134,7 +134,7 @@ namespace PlayerManager2
         private static void ListPlayers(IEnumerable<Player> playersToList)
         {
             List<Player> playerList = new List<Player>(playersToList);
-            
+
             playerList.Sort(); 
             playerList.Reverse();
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PlayerManager2
+namespace PlayerManager3
 {
     public class Player: IComparable<Player>
     {
