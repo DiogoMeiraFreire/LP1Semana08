@@ -133,6 +133,11 @@ namespace PlayerManager2
         /// </param>
         private static void ListPlayers(IEnumerable<Player> playersToList)
         {
+            List<Player> playerList = new List<Player>(playersToList);
+            
+            playerList.Sort(); 
+            playerList.Reverse();
+
             foreach (Player player in playersToList)
             {
                 Console.WriteLine($"{player.Name} {player.Score}");
