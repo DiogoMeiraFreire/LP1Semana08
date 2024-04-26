@@ -50,13 +50,13 @@ namespace AnimalKingdom{
 
                 if (a is IMammal)
                 {
-                    Console.Write($", Nº Nipples: {(a as IMammal).NumberOfNipples}");
+                    Console.Write($", Number of Nipples: {(a as IMammal).NumberOfNipples}");
 
                 }
                     
                 if (a is ICanFly)
                 {
-                    Console.Write($", Nº Wings: {(a as ICanFly).NumberOfWings}");
+                    Console.Write($", Number of Wings: {(a as ICanFly).NumberOfWings}");
                 }
         
                 Console.WriteLine();
