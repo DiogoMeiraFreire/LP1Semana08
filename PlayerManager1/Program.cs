@@ -86,9 +86,9 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </summary>
         private void ShowMenu()
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            Console.WriteLine(
+                "Welcome! \n1: Inserir jogador \n2: Listar jogadores "
+                + "\n3: Jogadores com o maior Score \n4: Sair");
         }
 
         /// <summary>

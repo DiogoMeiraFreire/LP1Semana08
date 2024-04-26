@@ -25,5 +25,5 @@ classDiagram
     class Animal
     <<abstract>> Animal
 ```
-- Steven Hall 22001753
+- Diogo Freire 22104684
 #
